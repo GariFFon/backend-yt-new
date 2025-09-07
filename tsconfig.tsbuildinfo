@@ -1,0 +1,1 @@
+{"root":["./src/index.ts","./src/routes/routes.ts","./src/routes/schema.ts","./src/service/aianalyse.ts","./src/service/youtube.ts"],"version":"5.9.2"}
