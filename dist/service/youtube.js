@@ -167,18 +167,7 @@ function fetchVideoData(url) {
         }
         return {
             video: Object.assign(Object.assign({}, videoDetails), { id: videoId, url }),
-            comments: comments.map(comment => ({
-                id: comment.id,
-                authorDisplayName: comment.snippet.authorDisplayName,
-                authorProfileImageUrl: comment.snippet.authorProfileImageUrl,
-                textDisplay: comment.snippet.textDisplay,
-                textOriginal: comment.snippet.textOriginal,
-                likeCount: comment.snippet.likeCount,
-                replyCount: comment.snippet.totalReplyCount || 0,
-                publishedAt: new Date(comment.snippet.publishedAt),
-                updatedAt: comment.snippet.updatedAt ? new Date(comment.snippet.updatedAt) : null,
-                parentId: comment.snippet.parentId || null,
-            })),
+            comments: comments,
             fetchingStats: {
                 reportedCount: reportedCommentCount,
                 fetchedCount: fetchedCommentCount,
