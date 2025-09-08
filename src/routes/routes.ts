@@ -8,7 +8,6 @@ VideoRoute.use(express.json());
 VideoRoute.use(cors());
 dotenv.config();
 
-
 VideoRoute.post("/video_analyse", async (req, res) => {
     try {
         console.log("Request body:", req.body);
